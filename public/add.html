@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Transaction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div class="card">
+
+            <h1 id="formTitle">Add Transaction</h1>
+
+            <form id="transactionForm" class="form">
+
+                <!-- DATE -->
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" id="tanggal" required>
+                </div>
+
+                <!-- CATEGORY -->
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="category" required>
+                        <option value="" disabled selected hidden>
+                            -- Select Category --
+                        </option>
+                        <option value="Salary">Salary</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Health">Health</option>
+                        <option value="Education">Education</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Emergency Expense">Emergency Expense</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+
+                <!-- TYPE -->
+                <div class="form-group">
+                    <label>Type</label>
+                    <select id="type" required>
+                        <option value="pemasukan">Income</option>
+                        <option value="pengeluaran">Expense</option>
+                    </select>
+                </div>
+
+                <!-- NOMINAL -->
+                <div class="form-group">
+                    <label>Amount (Rp)</label>
+                    <input type="number" id="nominal" placeholder="e.g. 50000" required>
+                </div>
+
+                <!-- NOTES -->
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="notes" placeholder="Optional notes..."></textarea>
+                </div>
+
+                <!-- BUTTON -->
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">Save Transaction</button>
+                    <a href="list.html" class="btn-secondary">View Data</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="add.js"></script>
+</body>
+</html>

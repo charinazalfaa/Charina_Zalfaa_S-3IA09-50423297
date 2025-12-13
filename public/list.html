@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="card wide">
+
+        <div class="header-row">
+            <div>
+                <h1>Transaction List</h1>
+            </div>
+            <a href="add.html" class="btn-primary">+ Add Transaction</a>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="summary">
+            <div class="summary-card income">
+                <p>Total Income</p>
+                <h2 id="totalIncome">Rp 0</h2>
+            </div>
+            <div class="summary-card expense">
+                <p>Total Expense</p>
+                <h2 id="totalExpense">Rp 0</h2>
+            </div>
+            <div class="summary-card balance">
+                <p>Balance</p>
+                <h2 id="balance">Rp 0</h2>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter">
+            <div>
+                <label>From</label>
+                <input type="date" id="startDate">
+            </div>
+            <div>
+                <label>To</label>
+                <input type="date" id="endDate">
+            </div>
+            <button onclick="applyFilter()" class="btn-secondary">Filter</button>
+            <button onclick="loadData()" class="btn-secondary">Reset</button>
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Amount (Rp)</th>
+                    <th>Notes</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="dataBody"></tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
